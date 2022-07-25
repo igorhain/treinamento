@@ -11,6 +11,7 @@ namespace ConsoleIgor
 {
     public class Banco
     {
+        //CLASSE BANCO
         private MySqlConnection sqlConnection; //VARIAVEL GLOBAL
 
         public Banco()
