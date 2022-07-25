@@ -24,7 +24,7 @@ namespace ConsoleIgor
 
             string sql = "select * from Filmes where nome = @nome";
             MySqlCommand command = new MySqlCommand(sql, sqlConnection);
-            command.Parameters.AddWithValue("@titulo", nome);
+            command.Parameters.AddWithValue("@nome", nome);
 
             using (var dr = command.ExecuteReader())
             {
@@ -43,9 +43,9 @@ namespace ConsoleIgor
         {
             if(BuscarFilmePorNome(filme.Titulo) == false)
             {
-                string sql = "insert into filmes values(@titulo, @datalancamento, @estudio)";
+                string sql = "insert into filmes values(@nome, @data, @estudio)";
                 MySqlCommand command = new MySqlCommand(sql, sqlConnection);
-                command.Parameters.AddWithValue("@titulo", filme.Titulo);
+                command.Parameters.AddWithValue("@nome", filme.Titulo);
                 command.Parameters.AddWithValue("@data", filme.DataLancamento);
                 command.Parameters.AddWithValue("@estudio", filme.Estudio);
 
