@@ -52,7 +52,7 @@ namespace ConsoleIgor
         private static void LerArquivoXML()
         {
             XmlDocument doc = new XmlDocument();
-            doc.Load("c:/temp/filmes.xml");
+            doc.Load("C:/Curso/xml arquivo/filmes");
 
             var banco = new Banco();
 
