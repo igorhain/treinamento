@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ConsoleIgor.Entidades;
+using ConsoleIgor.Repositorios;
+using System;
 using System.Xml;
 
 namespace ConsoleIgor
@@ -39,6 +41,7 @@ namespace ConsoleIgor
             if(retorno > 0)
                 Console.WriteLine(retorno);
 
+            Console.WriteLine("digite qualquer tecla para sair");
             Console.ReadLine();
         }
 
@@ -52,7 +55,7 @@ namespace ConsoleIgor
         private static void LerArquivoXML()
         {
             XmlDocument doc = new XmlDocument();
-            doc.Load("C:/Curso/xml arquivo/filmes");
+            doc.Load("C:/Curso/xml arquivo/filmes/filmes.xml");
 
             var banco = new Banco();
 
@@ -65,7 +68,9 @@ namespace ConsoleIgor
                 objetoFilme.DataLancamento = Convert.ToDateTime(filme.SelectSingleNode("DataLancamento").InnerText);
                 objetoFilme.Estudio = filme.SelectSingleNode("Estudio").InnerText;
 
-                banco.GravarObjetoNoBanco(objetoFilme);
+                var repositorioFilmes = new RepositorioFilmes();
+                repositorioFilmes.GravarFilme(objetoFilme);
+
                 Console.WriteLine("Titulo: " + objetoFilme.Titulo + " Data de Lançamento: " + objetoFilme.DataLancamento + " Estudio: " + objetoFilme.Estudio);
             }
         }

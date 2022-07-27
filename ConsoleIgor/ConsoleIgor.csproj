@@ -97,10 +97,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entidades\Ator.cs" />
-    <Compile Include="Banco.cs" />
+    <Compile Include="AcessoDados\Banco.cs" />
     <Compile Include="Entidades\Filme.cs" />
+    <Compile Include="Entidades\Parametro.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorios\Interfaces\IRepositorioFilmes.cs" />
+    <Compile Include="Repositorios\RepositorioFilmes.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
