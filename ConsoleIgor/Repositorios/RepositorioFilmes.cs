@@ -40,5 +40,11 @@ namespace ConsoleIgor.Repositorios
                     new Parametro("@estudio", filme.Estudio));
             }
         }
+
+        public void ListarFilmesPorEstudio(string nomeEstudio)
+        {
+            //EXECUTAR O EXERCICIO 1 AQUI
+            throw new NotImplementedException();
+        }
     }
 }

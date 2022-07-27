@@ -1,6 +1,7 @@
 ﻿using ConsoleIgor.Entidades;
 using ConsoleIgor.Repositorios;
 using System;
+using System.Data;
 using System.Xml;
 
 namespace ConsoleIgor
@@ -14,6 +15,9 @@ namespace ConsoleIgor
             Console.WriteLine("2 - Digite um número para multiplicar por 10");
             Console.WriteLine("3 - Digite um número para multiplicar por 4");
             Console.WriteLine("4 - Leitura de arquivo XML");
+            Console.WriteLine("5 - Cadastrar Ator");
+            Console.WriteLine("6 - Listar Filmes por Nome");
+            Console.WriteLine("7 - Listar Filmes por Estúdio");
             int opcao = lerInputDevolverConvertido<int>();
             int retorno = 0;
             switch (opcao)
@@ -31,7 +35,13 @@ namespace ConsoleIgor
                     LerArquivoXML();
                     break;
                 case 5:
-                    TesteAtor();
+                    CadastrarAtor();
+                    break;
+                case 6:
+                    ListarFilmesPorNome();
+                    break;
+                case 7:
+                    ListarFilmesPorEstudio();
                     break;
                 default:
                     Console.WriteLine("Você digitou um número inválido");
@@ -45,11 +55,47 @@ namespace ConsoleIgor
             Console.ReadLine();
         }
 
-        private static void TesteAtor()
+        private static void ListarFilmesPorNome()
+        {
+            Console.WriteLine("Digite o nome do filmes para listar os filmes");
+            string nomeFilme = Console.ReadLine();
+
+            var repositorioFilmes = new RepositorioFilmes();
+            var dtFilmes = repositorioFilmes.BuscarFilmePorNome(nomeFilme, true);
+
+            if (dtFilmes.Rows.Count > 0)
+                Console.WriteLine("Filmes encontrados:");
+            foreach (DataRow dr in dtFilmes.Rows)
+            {
+                Console.WriteLine(dr["nome"]);
+            }
+        }
+
+        private static void ListarFilmesPorEstudio()
+        {
+            //Exercicio 1
+            //CRIAR SELECT PARA LISTAR FILMES PELO ESTÚDIO
+            Console.WriteLine("Digite o nome do estúdio para listar os filmes");
+            string estudio = Console.ReadLine();
+
+            var repositorioFilmes = new RepositorioFilmes();
+            repositorioFilmes.ListarFilmesPorEstudio(estudio);
+        }
+
+        private static void CadastrarAtor()
         {
             var ator = new Ator();
-            ator.Nome = "Igor Hain";
-            ator.Idade = 23;
+            Console.WriteLine("Digite o nome do ator");
+            ator.Nome = Console.ReadLine();
+
+            Console.WriteLine("Digite a idade do ator");
+            ator.Idade = lerInputDevolverConvertido<int>();
+
+            //Exercicio 2
+            //Criar RepositorioAtores e depois utilizar para gravar o Ator
+            //também CRIAR a TABELA DE ATORES NO BANCO COM COLUNA DE NOME E IDADE
+            //repositorioAtor = new repositorioAtores();
+            //repositorioAtor.GravarAtor(ator);
         }
 
         private static void LerArquivoXML()
