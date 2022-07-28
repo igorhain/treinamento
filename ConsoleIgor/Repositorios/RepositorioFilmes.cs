@@ -41,10 +41,14 @@ namespace ConsoleIgor.Repositorios
             }
         }
 
-        public void ListarFilmesPorEstudio(string nomeEstudio)
+        public DataTable ListarFilmesPorEstudio(string nomeEstudio)
         {
             //EXECUTAR O EXERCICIO 1 AQUI
-            throw new NotImplementedException();
+            var banco = new Banco();
+            string sql = "";
+            sql = "select * from Filmes where estudio like @nomeEstudio";
+            
+            return banco.ExecuteQuery(sql, new Parametro("@nomeEstudio", "%" + nomeEstudio + "%"));
         }
     }
 }
