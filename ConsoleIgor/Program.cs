@@ -99,6 +99,15 @@ namespace ConsoleIgor
         }
 
 
+        private static void ListarFilmesPorAtores()
+        {
+            Console.WriteLine("Digite o nome do Ator");
+            string estudio = Console.ReadLine();
+
+            
+
+        }
+
         private static void CadastrarAtor()
         {
             var ator = new Ator();
