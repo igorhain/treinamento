@@ -91,6 +91,7 @@ namespace ConsoleIgor
             Console.WriteLine("Digite a idade do ator");
             ator.Idade = lerInputDevolverConvertido<int>();
 
+
             //Exercicio 2
             //Criar RepositorioAtores e depois utilizar para gravar o Ator
             //também CRIAR a TABELA DE ATORES NO BANCO COM COLUNA DE NOME E IDADE

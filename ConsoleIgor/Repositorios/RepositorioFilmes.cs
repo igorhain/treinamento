@@ -34,7 +34,7 @@ namespace ConsoleIgor.Repositorios
             var banco = new Banco();
             if (BuscarFilmePorNome(filme.Titulo, false).Rows.Count == 0)
             {
-                string sql = "insert into filmes (nome, data, estudio) values(@nome, @data, @estudio)";
+                string sql = "insert into filmes (nome, data, estudio) values (@nome, @data, @estudio)";
                 banco.ExecuteNonQuery(sql, new Parametro("@nome", filme.Titulo),
                     new Parametro("@data", filme.DataLancamento),
                     new Parametro("@estudio", filme.Estudio));
