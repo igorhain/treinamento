@@ -103,6 +103,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositorios\Interfaces\IRepositorioFilmes.cs" />
+    <Compile Include="Repositorios\RepositorioAtores.cs" />
     <Compile Include="Repositorios\RepositorioFilmes.cs" />
   </ItemGroup>
   <ItemGroup>
