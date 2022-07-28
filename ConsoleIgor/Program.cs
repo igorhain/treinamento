@@ -18,6 +18,7 @@ namespace ConsoleIgor
             Console.WriteLine("5 - Cadastrar Ator");
             Console.WriteLine("6 - Listar Filmes por Nome");
             Console.WriteLine("7 - Listar Filmes por Estúdio");
+            Console.WriteLine("8 - Listar Filmes por Ator");
             int opcao = lerInputDevolverConvertido<int>();
             int retorno = 0;
             switch (opcao)
@@ -42,6 +43,9 @@ namespace ConsoleIgor
                     break;
                 case 7:
                     ListarFilmesPorEstudio();
+                    break;
+                case 8:
+                    ListarFilmesPorAtores();
                     break;
                 default:
                     Console.WriteLine("Você digitou um número inválido");
@@ -93,6 +97,7 @@ namespace ConsoleIgor
 
             Console.WriteLine("");
         }
+
 
         private static void CadastrarAtor()
         {

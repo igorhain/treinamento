@@ -50,5 +50,13 @@ namespace ConsoleIgor.Repositorios
             
             return banco.ExecuteQuery(sql, new Parametro("@nomeEstudio", "%" + nomeEstudio + "%"));
         }
+        public DataTable ListarFilmesPorAtores(string nomeNome)
+        {
+            var banco = new Banco();
+            string sql = "";
+            sql = "select * from Filmes where nome like @nome";
+
+            return banco.ExecuteQuery(sql, new Parametro("@nome", "%" + nomeNome + "%"));
+        }
     }
 }
