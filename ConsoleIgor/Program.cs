@@ -82,11 +82,16 @@ namespace ConsoleIgor
             var dtFilmes = repositorioFilmes.ListarFilmesPorEstudio(estudio);
 
             if (dtFilmes.Rows.Count > 0)
-                Console.WriteLine("Filmes encontrados pelo estúdio: " + estudio);
+                Console.WriteLine("Filmes encontrados pelo estúdio começando com: " + estudio);
+
+            int c = 1;
             foreach (DataRow dr in dtFilmes.Rows)
             {
-                Console.WriteLine(dr["nome"]);
+                Console.WriteLine(c + " - " + dr["nome"]);
+                c++;
             }
+
+            Console.WriteLine("");
         }
 
         private static void CadastrarAtor()
