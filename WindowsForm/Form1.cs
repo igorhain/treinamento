@@ -44,5 +44,10 @@ namespace WindowsForm
             //AQUI ESTOU CHAMANDO UM MÉTODO DO REPOSITORIO ONDE PASSANDO O ATOR, ELE VAI INSERIR NO BANCO
             repositorioAtores.GravarAtor(ator);
         }
+
+        private void btn_BuscarAtor_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

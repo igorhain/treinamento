@@ -41,10 +41,10 @@ namespace WindowsForm
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btn_BuscarAtor = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btn_BuscarAtor = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -174,14 +174,20 @@ namespace WindowsForm
             this.tabPage2.Text = "Atores";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // btn_BuscarAtor
+            // dataGridView2
             // 
-            this.btn_BuscarAtor.Location = new System.Drawing.Point(308, 49);
-            this.btn_BuscarAtor.Name = "btn_BuscarAtor";
-            this.btn_BuscarAtor.Size = new System.Drawing.Size(75, 23);
-            this.btn_BuscarAtor.TabIndex = 10;
-            this.btn_BuscarAtor.Text = "Buscar";
-            this.btn_BuscarAtor.UseVisualStyleBackColor = true;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(19, 88);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(739, 447);
+            this.dataGridView2.TabIndex = 13;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(82, 51);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(220, 20);
+            this.textBox1.TabIndex = 12;
             // 
             // label4
             // 
@@ -192,20 +198,15 @@ namespace WindowsForm
             this.label4.TabIndex = 11;
             this.label4.Text = "Nome Ator:";
             // 
-            // textBox1
+            // btn_BuscarAtor
             // 
-            this.textBox1.Location = new System.Drawing.Point(82, 51);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(220, 20);
-            this.textBox1.TabIndex = 12;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(19, 88);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(739, 447);
-            this.dataGridView2.TabIndex = 13;
+            this.btn_BuscarAtor.Location = new System.Drawing.Point(308, 49);
+            this.btn_BuscarAtor.Name = "btn_BuscarAtor";
+            this.btn_BuscarAtor.Size = new System.Drawing.Size(75, 23);
+            this.btn_BuscarAtor.TabIndex = 10;
+            this.btn_BuscarAtor.Text = "Buscar";
+            this.btn_BuscarAtor.UseVisualStyleBackColor = true;
+            this.btn_BuscarAtor.Click += new System.EventHandler(this.btn_BuscarAtor_Click);
             // 
             // Form1
             // 
