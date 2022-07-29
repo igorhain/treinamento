@@ -47,7 +47,10 @@ namespace WindowsForm
 
         private void btn_BuscarAtor_Click(object sender, EventArgs e)
         {
+            var repositorioAtores = new RepositorioAtores();
+            var dataTable = repositorioAtores.BuscarAtorPorNome(textBox1.Text, true);
 
+            dataGridView2.DataSource = dataTable;
         }
     }
 }

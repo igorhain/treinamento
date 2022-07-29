@@ -19,6 +19,7 @@ namespace ConsoleIgor
             Console.WriteLine("6 - Listar Filmes por Nome");
             Console.WriteLine("7 - Listar Filmes por Estúdio");
             Console.WriteLine("8 - Listar Filmes por Ator");
+
             int opcao = lerInputDevolverConvertido<int>();
             int retorno = 0;
             switch (opcao)
