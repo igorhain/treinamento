@@ -22,12 +22,16 @@ namespace ConsoleIgor
 
         public void ConectarBanco()
         {
+            var connectionString = "";
             //string connectionString = "Server=localhost;Database=banco;User Id=root;Password=Kreator132;"
-            string connectionString = "server=localhost;user id=root;password=Kreator132;database=filmes";
-            //string connectionString = "Server=192.168.50.27;Database=filmes;User Id=root;Password=u*yLk@Bh]-Oahw1;";
+            //string connectionString = "server=localhost;user id=root;password=Kreator132;database=filmes";
             //string connectionString = "Server=34.95.193.80;Database=igoryuri;User Id=Igoryuri;Password=kreator132;";
+            if (Environment.MachineName.ToLower().Contains("note-hain"))
+                connectionString = "Server=192.168.50.27;Database=filmes;User Id=root;Password=u*yLk@Bh]-Oahw1;";
+            else
+                connectionString = "server=localhost;user id=root;password=Kreator132;database=filmes";
+            
             sqlConnection = new MySqlConnection(connectionString);
-
             sqlConnection.Open();
         }
 
