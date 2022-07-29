@@ -54,7 +54,7 @@ namespace ConsoleIgor.Repositorios
         {
             var banco = new Banco();
             string sql = "";
-            sql = "select * from Filmes where nome like @nome";
+            sql = "select * from atores where nome like @nome";
 
             return banco.ExecuteQuery(sql, new Parametro("@nome", "%" + nomeNome + "%"));
         }

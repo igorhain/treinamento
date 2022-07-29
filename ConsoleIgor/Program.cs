@@ -104,8 +104,19 @@ namespace ConsoleIgor
             Console.WriteLine("Digite o nome do Ator");
             string estudio = Console.ReadLine();
 
-            
+            var repositorioFilmes = new RepositorioFilmes();
+            var dtAtor = repositorioFilmes.ListarFilmesPorAtores(estudio);
 
+            if (dtAtor.Rows.Count > 0)
+                Console.WriteLine("Filmes encontrados pelo Ator começando com:" + estudio);
+
+            var c = 1;
+            foreach (DataRow dr in dtAtor.Rows)
+            {
+                Console.WriteLine(c + " - " + dr["nome"]);
+                c++;
+            }
+            Console.WriteLine("");
         }
 
         private static void CadastrarAtor()
