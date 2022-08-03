@@ -45,6 +45,13 @@ namespace WindowsForm
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btn_BuscarAtor = new System.Windows.Forms.Button();
+            this.btnEditarFilme = new System.Windows.Forms.Button();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtData = new System.Windows.Forms.TextBox();
+            this.txtEstudio = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -83,10 +90,10 @@ namespace WindowsForm
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(18, 46);
+            this.dataGridView1.Location = new System.Drawing.Point(18, 109);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(742, 508);
+            this.dataGridView1.Size = new System.Drawing.Size(742, 445);
             this.dataGridView1.TabIndex = 3;
             // 
             // label2
@@ -143,6 +150,13 @@ namespace WindowsForm
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.label7);
+            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Controls.Add(this.txtEstudio);
+            this.tabPage1.Controls.Add(this.txtData);
+            this.tabPage1.Controls.Add(this.txtNome);
+            this.tabPage1.Controls.Add(this.btnEditarFilme);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.txtFilme);
             this.tabPage1.Controls.Add(this.btnBuscar);
@@ -208,6 +222,64 @@ namespace WindowsForm
             this.btn_BuscarAtor.UseVisualStyleBackColor = true;
             this.btn_BuscarAtor.Click += new System.EventHandler(this.btn_BuscarAtor_Click);
             // 
+            // btnEditarFilme
+            // 
+            this.btnEditarFilme.Location = new System.Drawing.Point(441, 17);
+            this.btnEditarFilme.Name = "btnEditarFilme";
+            this.btnEditarFilme.Size = new System.Drawing.Size(75, 23);
+            this.btnEditarFilme.TabIndex = 4;
+            this.btnEditarFilme.Text = "Editar";
+            this.btnEditarFilme.UseVisualStyleBackColor = true;
+            this.btnEditarFilme.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // txtNome
+            // 
+            this.txtNome.Location = new System.Drawing.Point(59, 75);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(146, 20);
+            this.txtNome.TabIndex = 5;
+            // 
+            // txtData
+            // 
+            this.txtData.Location = new System.Drawing.Point(252, 75);
+            this.txtData.Name = "txtData";
+            this.txtData.Size = new System.Drawing.Size(146, 20);
+            this.txtData.TabIndex = 6;
+            // 
+            // txtEstudio
+            // 
+            this.txtEstudio.Location = new System.Drawing.Point(452, 75);
+            this.txtEstudio.Name = "txtEstudio";
+            this.txtEstudio.Size = new System.Drawing.Size(146, 20);
+            this.txtEstudio.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(18, 78);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Nome";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(211, 78);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(30, 13);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Data";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(404, 79);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(42, 13);
+            this.label7.TabIndex = 10;
+            this.label7.Text = "Estudio";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,6 +317,13 @@ namespace WindowsForm
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_BuscarAtor;
+        private System.Windows.Forms.Button btnEditarFilme;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtEstudio;
+        private System.Windows.Forms.TextBox txtData;
+        private System.Windows.Forms.TextBox txtNome;
     }
 }
 

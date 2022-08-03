@@ -58,5 +58,20 @@ namespace ConsoleIgor.Repositorios
 
             return banco.ExecuteQuery(sql, new Parametro("@nome", "%" + nomeNome + "%"));
         }
+
+        public void EditarFilmePorNome(Filme filme)
+        {
+            var banco = new Banco();
+
+            string sql = "";
+            sql = "UPDATE Filmes SET nome = @nome, data = @data, estudio = @estudio where nome = @nome";
+            banco.ExecuteNonQuery(sql, new Parametro("@nome", filme.Titulo),
+                new Parametro("@data", filme.DataLancamento),
+                new Parametro("@estudio", filme.Estudio));
+            
+        }
+
+
+
     }
 }

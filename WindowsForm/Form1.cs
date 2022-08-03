@@ -52,5 +52,17 @@ namespace WindowsForm
 
             dataGridView2.DataSource = dataTable;
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            var repositorioFilmes = new RepositorioFilmes();
+            var filme = new Filme();
+            filme.Titulo = txtNome.Text;
+            filme.DataLancamento = Convert.ToDateTime(txtData.Text);
+            filme.Estudio = txtEstudio.Text;
+            repositorioFilmes.EditarFilmePorNome(filme);
+            
+
+        }
     }
 }
