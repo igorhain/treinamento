@@ -64,11 +64,13 @@ namespace ConsoleIgor.Repositorios
             var banco = new Banco();
 
             string sql = "";
-            sql = "UPDATE Filmes SET nome = @nome, data = @data, estudio = @estudio where nome = @nome";
-            banco.ExecuteNonQuery(sql, new Parametro("@nome", filme.Titulo),
+            sql = "UPDATE filmes SET nome = @nome, data = @data, estudio = @estudio where id = @id";
+            banco.ExecuteNonQuery(sql, new Parametro("@id", filme.Id),
+                new Parametro("@nome", filme.Titulo),
                 new Parametro("@data", filme.DataLancamento),
                 new Parametro("@estudio", filme.Estudio));
-            
+
+           
         }
 
 

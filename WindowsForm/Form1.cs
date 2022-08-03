@@ -60,8 +60,19 @@ namespace WindowsForm
             filme.Titulo = txtNome.Text;
             filme.DataLancamento = Convert.ToDateTime(txtData.Text);
             filme.Estudio = txtEstudio.Text;
+            filme.Id = Convert.ToInt32(txtId.Text);
             repositorioFilmes.EditarFilmePorNome(filme);
             
+
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dataGridView1.Enabled = true;
+            txtId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            txtNome.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txtData.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            txtEstudio.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
 
         }
     }
